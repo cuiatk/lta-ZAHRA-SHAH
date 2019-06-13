@@ -12,7 +12,7 @@ public class Driver {
 	
 	public static void main(String[] args) {
 		String input = "The <b>Good</b>, the <i>Bad</i>, and the <strong>Ugly</strong>";
-		String regex="<[^>]*>";//first commit
+		String regex="<[^>]*>"; //first commit
 		String output = input.replaceAll(regex, "");
 		System.out.println(output);
 		
