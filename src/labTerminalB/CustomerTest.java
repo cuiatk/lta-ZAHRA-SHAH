@@ -33,7 +33,7 @@ public class CustomerTest {
 	 */
 	
 	@Test
-	public void oneMovieByTwoCustomer()
+	public void testStatement2()
 	{
 		me.addRental(r1);
 		me2.addRental(r1);
@@ -53,7 +53,7 @@ public class CustomerTest {
 		}
 	}
 	@Test
-	public void TwoMovieByTwoCustomer()
+	public void testStatement3()
 	{
 		me.addRental(r1);
 		me.addRental(r2);
@@ -74,9 +74,6 @@ public class CustomerTest {
 			assert true;
 		}
 	}
-	
-	
-	
 	
 
 }

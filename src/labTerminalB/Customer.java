@@ -28,7 +28,13 @@ public class Customer {
 		
 		/**
 		 * TODO 3		10 Marks
-		 * Provide suitable specification for statement method 
+		 * calculate the rent according to movie type and also of customer and new release
+		 * function works according to movie type i-e new release, childern ,regular
+		 * renter points are added according to no of days
+		 * function will calculate frequent renter points when customer buys over again
+		 * regular movie adds 2 points and childern ass 1.5 and both are multiplides according to formula
+		 * @return returns the result of the movies after adding renter points and movie type
+		 * 
 		 */
 		public String statement() {
 		double totalAmount = 0;
@@ -39,21 +45,7 @@ public class Customer {
 			double thisAmount = 0;
 			Rental each = (Rental) rentals.nextElement();
 			//determine amounts for each line
-			switch (each.getMovie().getPriceCode()) {
-			case Movie.REGULAR:
-				thisAmount += 2;
-				if (each.getDaysRented() > 2)
-					thisAmount += (each.getDaysRented() - 2) * 1.5;
-				break;
-			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented() * 3;
-				break;
-			case Movie.CHILDRENS:
-				thisAmount += 1.5;
-				if (each.getDaysRented() > 3)
-					thisAmount += (each.getDaysRented() - 3) * 1.5;
-				break;
-			}
+			thisAmount = each.getCharge(thisAmount);
 			// add frequent renter points
 			frequentRenterPoints ++;
 			// add bonus for a two day new release rental
