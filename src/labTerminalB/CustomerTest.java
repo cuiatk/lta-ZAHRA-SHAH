@@ -31,6 +31,9 @@ public class CustomerTest {
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
 	 * strategy basics i.e. input partition etc
 	 */
-	
+	@Test
+	public void testStatement2() {
+		
+	}
 
 }
